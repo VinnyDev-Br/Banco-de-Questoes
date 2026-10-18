@@ -5,7 +5,7 @@ landing(){S={v:'landing'};render()},
 auth(a){S={v:'auth',mode:a=='criar'?'criar':'entrar'};render()},
 modo(a){const v=['nm','em','pw'].map(i=>$('#'+i)?.value||'');S.mode=a;render(1);['nm','em','pw'].forEach((i,k)=>{const e=$('#'+i);if(e)e.value=v[k]})},
 demo(a){const c=$('.lp-q');if(!c||c.dataset.d)return;c.dataset.d=1;c.querySelectorAll('.lp-alt').forEach(b=>{b.classList.toggle('ok',b.dataset.arg=='b');if(b.dataset.arg==a&&a!='b')b.classList.add('no')});const f=c.querySelector('.lp-fb');f.textContent=(a=='b'?'Correto! ':'Incorreto. ')+'a₁₀ = 3 + 9·4 = 39, alternativa B.';f.hidden=false},
-entrar(){const s=$('#splash');s.classList.add('out');try{sessionStorage.setItem('eear_splash',1)}catch(e){}setTimeout(()=>s.remove(),700)},
+entrar(){const s=$('#splash');s.classList.add('out');try{sessionStorage.setItem('bq_splash',1)}catch(e){}setTimeout(()=>s.remove(),700)},
 mat(a){S={v:'mat',m:a,f:'todas'};render()},
 filt(a){S.f=a;render(1)},
 async start(a){const m=MT.find(x=>x.id==S.m),as=a=='*'?m.assuntos.map(x=>x.id):[a],f=S.f;
@@ -41,5 +41,5 @@ async resolver(a){await run(sb.from('relatos').delete().eq('id',a));await A.admi
 async signup(){const email=$('#em').value,password=$('#pw').value;if(!email||password.length<6)return toast('Informe e-mail e uma senha de 6+ caracteres');
  const{data,error}=await sb.auth.signUp({email,password,options:{data:{nome:$('#nm').value.trim()}}});if(error)return toast(error.message);if(!data.session)toast('Conta criada! Confirme seu e-mail para entrar.')},
 logout(){return sb.auth.signOut()},
-theme(){const t=document.documentElement.dataset.t=='dark'?'light':'dark';document.documentElement.dataset.t=t;try{localStorage.setItem('eear_t',t)}catch(e){}}
+theme(){const t=document.documentElement.dataset.t=='dark'?'light':'dark';document.documentElement.dataset.t=t;try{localStorage.setItem('bq_t',t)}catch(e){}}
 };
