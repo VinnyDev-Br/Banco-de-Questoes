@@ -1,0 +1,2 @@
+Coloque aqui o brasão da EEAr com o nome exato: logo-eear.png
+Se o arquivo não existir, o site mostra um emblema provisório.

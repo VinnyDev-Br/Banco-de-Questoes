@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Banco de Questões</title>
+<meta name="description" content="Banco de questões feito por Vinicius Macedo">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/tema-eear.css">
+<link rel="stylesheet" href="css/landing.css">
+<link rel="stylesheet" href="css/abertura.css">
+</head>
+<body>
+<div id="splash" role="dialog" aria-label="Abertura"><canvas class="ab-stars" aria-hidden="true"></canvas><div class="ab-terra" aria-hidden="true"></div><div class="ab-fly" aria-hidden="true"><span class="ab-trail"></span><svg viewBox="-30 0 230 56" aria-hidden="true"><defs><linearGradient id="ab-b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef3fb"/><stop offset="1" stop-color="#7f8ea8"/></linearGradient><linearGradient id="ab-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="-28" y2="0"><stop offset="0" stop-color="#fff"/><stop offset=".35" stop-color="#ffb347"/><stop offset=".7" stop-color="#ff6a00"/><stop offset="1" stop-color="#ff6a0000"/></linearGradient></defs><path class="ab-flame" d="M10 28.5 L-28 31 L10 33.5Z" fill="url(#ab-g)"/><path d="M60 25.5 34 3H24l14 23Z" fill="#9aa9c2"/><path d="M50 33 26 42h10l30-7Z" fill="#8392ad"/><path d="M130 35 90 52H78l24-17Z" fill="#8392ad"/><path d="M198 31l-16-3.500-22-2.500-68-1-40 1.500L14 28v6l38 1 40 1 68 0 22-2Z" fill="url(#ab-b)"/><path d="M110 36h40l-4 5h-30Z" fill="#56647d"/><path d="M146 25.500Q158 15 178 26.500Z" fill="#8fc7ff"/><path d="M70 30.500 176 30" stroke="#c9a227" stroke-width="1.200" stroke-linecap="round" fill="none"/><path d="M10 27.500h6v7h-6Z" fill="#3a465c"/></svg></div><div class="ab-c"><span class="lg ab-logo"><img src="img/logo.png" alt="" onerror="this.remove()"><svg class="fb" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#0b1f3a" stroke="#c9a227" stroke-width="2.5"/><path d="M8 34c10-2 17-6 24-14 7 8 14 12 24 14-9 1-16 5-24 12-8-7-15-11-24-12z" fill="#c9a227"/><path d="M32 22l2.6 7h7.4l-6 4.4 2.3 7.1-6.3-4.4-6.3 4.4 2.3-7.1-6-4.4h7.4z" fill="#fff"/></svg></span><p class="ab-k">Bem-vindo ao</p><h1 class="ab-t">Banco de Questões</h1><p class="ab-s">Treino para o CFS da EEAr em Português, Matemática, Física e Inglês.</p><button class="btn" data-do="entrar">Decolar</button></div></div>
+<header><div class="w">
+<button class="logo" data-do="home" aria-label="Início"><span class="lg"><img src="img/logo.png" alt="" onerror="this.remove()"><svg class="fb" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#0b1f3a" stroke="#c9a227" stroke-width="2.5"/><path d="M8 34c10-2 17-6 24-14 7 8 14 12 24 14-9 1-16 5-24 12-8-7-15-11-24-12z" fill="#c9a227"/><path d="M32 22l2.6 7h7.4l-6 4.4 2.3 7.1-6.3-4.4-6.3 4.4 2.3-7.1-6-4.4h7.4z" fill="#fff"/></svg></span><span>Macedo Concursos </span></button>
+<button class="nb au" data-do="erros"><i data-i="book"></i><span>Caderno de erros</span><em id="nerr"></em></button>
+<button class="nb au" data-do="rank"><i data-i="trophy"></i><span>Ranking</span></button>
+<button class="nb au" data-do="desemp"><i data-i="chart"></i><span>Desempenho</span></button>
+<button class="nb ad" data-do="admin"><i data-i="shield"></i><span>Admin</span></button>
+<button class="nb" data-do="theme" aria-label="Alternar tema"><i data-i="moon"></i></button>
+<button class="nb au" data-do="logout" aria-label="Sair"><i data-i="out"></i><span>Sair</span></button>
+</div></header>
+<main class="w" id="app"></main>
+<div id="toast" role="status" hidden></div>
+
+<!-- Configuração do Supabase: edite js/config.js -->
+<script src="js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="js/icones.js"></script>
+<script src="js/estado.js"></script>
+<script src="js/telas.js"></script>
+<script src="js/acoes.js"></script>
+<script src="js/abertura.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* Abertura: viagem espacial (estrelas em dobra de velocidade), caça cruzando a tela e boas-vindas */
+#splash{position:fixed;inset:0;z-index:50;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#0c1a3a 0%,#060b16 60%,#02050b 100%);transition:opacity .6s,transform .6s}
+#splash.out{opacity:0;transform:scale(1.04);pointer-events:none}
+.ab-stars{position:absolute;inset:0;width:100%;height:100%}
+.ab-terra{position:absolute;left:-25%;right:-25%;bottom:-70vh;height:85vh;border-radius:50%;background:radial-gradient(ellipse at 50% 0,#2563eb 0,#0b2a6b 18%,#050d1a 55%);box-shadow:0 -6px 50px 4px #3b82f66b,inset 0 10px 24px #9cc4ff80;animation:ab-sobe 3.4s cubic-bezier(.2,.7,.2,1) both}
+.ab-terra::after{content:'';position:absolute;top:-14px;right:22%;width:34%;height:30px;border-radius:50%;background:radial-gradient(closest-side,#ffe2a0cc,transparent);filter:blur(6px);opacity:0;animation:ab-sol 2.4s ease 2.2s forwards}
+@keyframes ab-sobe{from{transform:translateY(22vh)}}
+@keyframes ab-sol{to{opacity:1}}
+.ab-fly{position:absolute;left:0;top:14%;width:clamp(170px,24vw,300px);aspect-ratio:230/56;transform:translateX(-130%);animation:ab-voo 3.1s cubic-bezier(.45,.05,.35,1) .5s forwards}
+@keyframes ab-voo{0%{transform:translateX(-130%) rotate(-5deg)}100%{transform:translateX(calc(100vw + 40px)) rotate(2deg)}}
+.ab-fly svg{display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 6px 10px #0008)}
+.ab-trail{position:absolute;right:80%;top:55%;width:80vw;height:3px;margin-top:-1px;background:linear-gradient(90deg,transparent,#9db8e8aa 60%,#fff);filter:blur(1px)}
+.ab-flame{transform-origin:10px 31px;animation:ab-chama .12s linear infinite alternate}
+@keyframes ab-chama{to{transform:scaleX(1.3) scaleY(.88)}}
+.ab-c{position:relative;z-index:2;padding:24px;max-width:760px}
+.ab-c>*{opacity:0;animation:ab-in .9s ease forwards}
+@keyframes ab-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.ab-c .ab-logo{width:min(26vw,96px);height:min(26vw,96px);margin:0 auto;animation-delay:1.5s}
+.ab-k{margin:16px 0 0;font-size:clamp(16px,3vw,22px);color:#9db8e8;animation-delay:2s}
+.ab-t{margin:2px 0 0;color:#fff;font:700 clamp(44px,10vw,92px)/.96 'Barlow Condensed',Inter,sans-serif;letter-spacing:.01em;animation-delay:2.3s}
+.ab-t::after{content:'';display:block;height:3px;width:0;margin:16px auto 0;background:#c9a227;animation:ab-linha 1s ease 2.8s forwards}
+@keyframes ab-linha{to{width:110px}}
+.ab-s{margin:16px auto 28px;max-width:460px;color:#9aa7bd;animation-delay:3s}
+#splash .btn{background:#c9a227;color:#0b1f3a;padding:12px 32px;font-size:17px;border-radius:99px;animation-delay:3.3s}

@@ -1,0 +1,3 @@
+// ESTE É O ARQUIVO PARA COLAR A URL E A CHAVE ANON DO SUPABASE (Project Settings → API)
+
+const SUPABASE_URL='https://vecrrpuslriqhrmencpc.supabase.co', SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlY3JycHVzbHJpcWhybWVuY3BjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIzNDQxODQsImV4cCI6MjEwNzkyMDE4NH0.lA9-WyIrcwcLoTeDvKPx2ei_Y80mrNfqqT7l3NO5NhE';
