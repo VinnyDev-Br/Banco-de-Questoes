@@ -9,7 +9,7 @@ create table questoes(id text primary key, assunto_id text not null references a
 create table perfis(id uuid primary key references auth.users(id) on delete cascade, nome text not null default 'Aluno', is_admin boolean not null default false);
 create table respostas(user_id uuid not null default auth.uid() references perfis(id) on delete cascade,
   questao_id text not null references questoes(id) on delete cascade, alt text not null, ok boolean not null,
-  criada_em timestamptz default now(), primary key(user_id, questao_id));
+  criada_em timestamptz default now(), tempo_s int check(tempo_s between 0 and 3600), primary key(user_id, questao_id));
 create table favoritos(user_id uuid not null default auth.uid() references perfis(id) on delete cascade,
   questao_id text not null references questoes(id) on delete cascade, primary key(user_id, questao_id));
 create table comentarios(id bigint generated always as identity primary key, questao_id text not null references questoes(id) on delete cascade,

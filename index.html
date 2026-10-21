@@ -12,19 +12,36 @@
 <link rel="stylesheet" href="css/tema.css">
 <link rel="stylesheet" href="css/landing.css">
 <link rel="stylesheet" href="css/abertura.css">
+<link rel="stylesheet" href="css/painel.css">
 </head>
 <body>
 <div id="splash" role="dialog" aria-label="Abertura"><canvas class="ab-chuva" aria-hidden="true"></canvas><div class="ab-radar" aria-hidden="true"></div><div class="ab-c"><span class="lg ab-logo"><img src="img/logo.svg" alt="" onerror="this.remove()"><svg class="fb" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#04120a" stroke="#4ade80" stroke-width="2.5"/><text x="32" y="44" font-size="34" font-weight="700" text-anchor="middle" fill="#4ade80" font-family="Rajdhani,Inter,sans-serif">M</text></svg></span><p class="ab-k">// acesso autorizado</p><h1 class="ab-t">Militares Questões</h1><p class="ab-s">Treino para concursos militares em Português, Matemática, Física e Inglês.</p><ul class="ab-boot" aria-hidden="true"><li>iniciando módulos de estudo <b>OK</b></li><li>criptografando seu progresso <b>OK</b></li><li>conexão segura estabelecida <b>OK</b></li></ul><button class="btn" data-do="entrar">Acessar</button></div></div>
 <header><div class="w">
 <button class="logo" data-do="home" aria-label="Início"><span class="lg"><img src="img/logo.svg" alt="" onerror="this.remove()"><svg class="fb" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#04120a" stroke="#4ade80" stroke-width="2.5"/><text x="32" y="44" font-size="34" font-weight="700" text-anchor="middle" fill="#4ade80" font-family="Rajdhani,Inter,sans-serif">M</text></svg></span><span>Militares Questões</span></button>
-<button class="nb au" data-do="erros"><i data-i="book"></i><span>Caderno de erros</span><em id="nerr"></em></button>
-<button class="nb au" data-do="rank"><i data-i="trophy"></i><span>Ranking</span></button>
-<button class="nb au" data-do="desemp"><i data-i="chart"></i><span>Desempenho</span></button>
-<button class="nb ad" data-do="admin"><i data-i="shield"></i><span>Admin</span></button>
-<button class="nb" data-do="theme" aria-label="Alternar tema"><i data-i="moon"></i></button>
-<button class="nb au" data-do="logout" aria-label="Sair"><i data-i="out"></i><span>Sair</span></button>
 </div></header>
+<div id="shell">
+<aside id="side">
+<button class="brand" data-do="home" aria-label="Banco de questões"><span class="lg"><img src="img/logo.svg" alt="" onerror="this.remove()"></span><span><b>MILITARES</b><small>QUESTÕES · PREP</small></span></button>
+<div class="sys"><i></i><div><b>SISTEMA ONLINE</b><small id="nivel">Nível de acesso: ALUNO</small></div></div>
+<p class="lab sec">Central de comando</p>
+<nav>
+<button class="sn" data-do="visao" data-v="visao"><i data-i="grid"></i><span class="tx">Visão geral</span></button>
+<button class="sn" data-do="home" data-v="home mat sessao res"><i data-i="book"></i><span class="tx">Banco de questões</span><em id="nbanco"></em></button>
+<button class="sn" data-do="desemp" data-v="desemp"><i data-i="chart"></i><span class="tx">Desempenho</span></button>
+<button class="sn" data-do="salvas" data-v="salvas"><i data-i="bookmark"></i><span class="tx">Questões salvas</span></button>
+<button class="sn" data-do="erros" data-v="erros"><i data-i="alert"></i><span class="tx">Caderno de erros</span><em id="nerr"></em></button>
+<button class="sn" data-do="rank" data-v="rank"><i data-i="trophy"></i><span class="tx">Ranking</span></button>
+<button class="sn ad" data-do="admin" data-v="admin"><i data-i="shield"></i><span class="tx">Admin</span></button>
+</nav>
+<button class="mis" data-do="missao" title="Clique para mudar o nome da missão"><div><span class="lab">Missão atual</span><b id="mnome"></b></div><div class="bar"><i id="mbar"></i></div><div><span class="lab">Progresso geral</span><span id="mpct"></span></div></button>
+<div class="usr"><span class="av avt"></span><div><b id="usrn"></b><small id="usrl"></small></div><button class="nb" data-do="logout" aria-label="Sair"><i data-i="out"></i></button></div>
+</aside>
+<div id="main">
+<div id="top"><div class="srch"><i data-i="search"></i><input id="busca" placeholder="Buscar por matéria ou assunto..." autocomplete="off" aria-label="Buscar"><kbd>CTRL K</kbd><div id="res" hidden></div></div>
+<div class="top-r"><span class="seq"><i data-i="alert"></i><span><small>SEQUÊNCIA</small><b id="seq">0 dias</b></span></span><button class="nb bell" data-do="erros" aria-label="Caderno de erros"><i data-i="bell"></i><u id="bdot" hidden></u></button><span class="av avt"></span><button class="nb out-b" data-do="logout" aria-label="Sair"><i data-i="out"></i></button></div></div>
 <main class="w" id="app"></main>
+</div>
+</div>
 <div id="toast" role="status" hidden></div>
 
 <!-- Configuração do Supabase: edite js/config.js -->
@@ -32,8 +49,10 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="js/icones.js"></script>
 <script src="js/estado.js"></script>
+<script src="js/tempo.js"></script>
 <script src="js/telas.js"></script>
 <script src="js/acoes.js"></script>
+<script src="js/painel.js"></script>
 <script src="js/abertura.js"></script>
 <script src="js/main.js"></script>
 </body>
