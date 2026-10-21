@@ -1,4 +1,4 @@
-# Nexus Questões
+# Banco de Questões 
 
 Plataforma web de banco de questões focada em concursos militares. Treine por matéria e assunto, veja o gabarito instantaneamente e acompanhe sua evolução em qualquer dispositivo.
 
