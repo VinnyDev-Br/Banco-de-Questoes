@@ -1,2 +1,0 @@
-Logo do site: logo.svg (capacete militar verde). logo.png e a mesma imagem em PNG (512x512).
-Se o arquivo nao existir, o site mostra um emblema provisorio com a letra M.
