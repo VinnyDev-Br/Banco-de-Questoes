@@ -1,8 +1,8 @@
-# Banco de Questões
+# Militares Questões
 
 > Projeto pessoal em desenvolvimento.
 
-Banco de questões de concursos criado por Vinicius Macedo (Macedo Concursos). A ideia é treinar por matéria e por assunto, ver o gabarito na hora e acompanhar a própria evolução, em qualquer aparelho.
+Banco de questões para concursos militares criado por Vinicius Macedo. A ideia é treinar por matéria e por assunto, ver o gabarito na hora e acompanhar a própria evolução, em qualquer aparelho.
 
 ## O que já existe
 
@@ -13,7 +13,7 @@ Banco de questões de concursos criado por Vinicius Macedo (Macedo Concursos). A
 - Favoritas, comentários nas questões e relato de problemas
 - Conta com login, e o progresso fica salvo e acompanha o aluno entre aparelhos
 - Painel de administrador para cadastrar questões uma a uma ou importar várias de uma vez em JSON
-- Visual escuro e estrelado, com página inicial e tela de abertura animada
+- Visual de cibersegurança militar (verde tático, grade, radar e fonte mono), com página inicial e tela de abertura em estilo terminal
 
 ## Tecnologias
 
@@ -25,7 +25,7 @@ Banco de questões de concursos criado por Vinicius Macedo (Macedo Concursos). A
 - `css/`: estilos da base, do tema, da página inicial e da abertura
 - `js/`: telas, ações, estado e inicialização do app
 - `banco/`: esquema do banco de dados e questões iniciais
-- `img/`: logo
+- `img/`: logo (capacete militar verde, em SVG e PNG)
 
 ## Status
 

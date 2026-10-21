@@ -1,29 +1,30 @@
-/* Identidade visual: fontes, tela de abertura, avião, animações, hero da home */
+/* Identidade visual: fontes, cabeçalho, hero da home com radar, animações */
 
-h1{font-family:'Barlow Condensed',Inter,sans-serif;font-weight:700;letter-spacing:.01em}
-h1{font-size:clamp(34px,7vw,52px);line-height:1.02}
-header{border-bottom:2px solid #c9a227}
-.logo{font-family:'Barlow Condensed',Inter,sans-serif;font-size:20px;letter-spacing:.02em}
+h1{font-family:Rajdhani,Inter,sans-serif;font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+h1{font-size:clamp(32px,6.5vw,50px);line-height:1.02}
+header{border-bottom:1px solid #4ade8066}
+.logo{font-family:Rajdhani,Inter,sans-serif;font-size:21px;letter-spacing:.07em;text-transform:uppercase}
 .lg{display:inline-block;width:34px;height:34px;flex:none}.lg img,.lg svg{display:block;width:100%;height:100%;object-fit:contain}.lg img~.fb{display:none}
 @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes pop{50%{transform:scale(1.015)}}
 #app.anim>*{animation:up .4s both}
 .anim .cards>*{animation:up .5s both}.anim .cards>:nth-child(2){animation-delay:.07s}.anim .cards>:nth-child(3){animation-delay:.14s}.anim .cards>:nth-child(4){animation-delay:.21s}
-.card{transition:transform .2s,box-shadow .2s}.card:not(:disabled):hover{transform:translateY(-4px);box-shadow:0 14px 30px #0b1f3a24}
+.card{transition:transform .2s,box-shadow .2s}.card:not(:disabled):hover{transform:translateY(-4px);box-shadow:0 0 0 1px #4ade8055,0 14px 30px #000a}
 .ico{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:12px;background:color-mix(in srgb,var(--c) 15%,transparent)}
-.q{box-shadow:0 2px 10px #0b1f3a0f}.alt{transition:transform .15s,border-color .15s,background .15s}.alt:not(:disabled):hover{transform:translateX(4px)}.alt.ok{animation:pop .35s}.fb{animation:up .3s}
-.hero{position:relative;overflow:hidden;border-radius:20px;padding:34px 26px 30px;color:#fff;background:linear-gradient(160deg,#0b1f3a 0%,#173d8f 55%,#4d8fe8 100%);box-shadow:0 10px 30px #0b1f3a30}
-.hero h1{margin:0 0 6px;color:#fff;position:relative}.hero p{margin:0;color:#d6e4ff;position:relative}
-.hero .lg{position:absolute;right:22px;top:18px;width:76px;height:76px}
+.q{box-shadow:0 2px 10px #0006}.alt{transition:transform .15s,border-color .15s,background .15s}.alt:not(:disabled):hover{transform:translateX(4px)}.alt.ok{animation:pop .35s}.fb{animation:up .3s}
+
+/* Hero da home: painel tático com grade e radar girando atrás do capacete */
+.hero{position:relative;overflow:hidden;border-radius:14px;padding:34px 26px 30px;color:#fff;background:linear-gradient(160deg,#04120a 0%,#0f3d20 100%);border:1px solid #1f4d2e;box-shadow:0 10px 30px #0008}
+.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(#4ade8014 1px,transparent 1px),linear-gradient(90deg,#4ade8014 1px,transparent 1px);background-size:28px 28px}
+.hero h1{margin:0 0 6px;color:#fff;position:relative}.hero p{margin:0;color:#c7ecd0;position:relative}
+.hero .lg{position:absolute;right:22px;top:18px;width:84px;height:84px;filter:drop-shadow(0 0 14px #4ade8055)}
 @media(max-width:560px){.hero .lg{display:none}}
-.sky{position:absolute;inset:0;pointer-events:none}
-.cl{position:absolute;left:-30%;border-radius:50%;background:#fff;opacity:.13;filter:blur(16px);animation:drift 38s linear infinite}
-.c1{top:12%;width:220px;height:60px}.c2{top:58%;width:300px;height:70px;animation-duration:55s;animation-delay:-20s}.c3{top:80%;width:180px;height:44px;animation-duration:46s;animation-delay:-8s}
-@keyframes drift{to{left:120%}}
-.jet{position:absolute;top:16%;left:-90px;display:flex;color:#fff;animation:cruise 14s linear infinite 1s}
-.jet svg{transform:rotate(45deg);fill:currentColor;fill-opacity:.9;filter:drop-shadow(0 4px 6px #0006)}
-.jet::before{content:'';position:absolute;right:70%;top:50%;width:180px;height:2px;background:linear-gradient(90deg,transparent,#ffffffaa)}
-@keyframes cruise{0%{left:-90px}55%,100%{left:105%}}
-.bar.fly{overflow:visible;margin-top:14px}.bar.fly i{position:relative;overflow:visible;border-radius:9px}
-.bar.fly i::after{content:'';position:absolute;right:-14px;top:-11px;width:26px;height:26px;transform:rotate(45deg);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231d4ed8' stroke='%231d4ed8' stroke-width='1.2' stroke-linejoin='round'%3E%3Cpath d='M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z'/%3E%3C/svg%3E") center/contain no-repeat}
+.sky{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.rd{position:absolute;right:-70px;top:-74px;width:260px;height:260px;border-radius:50%;background:repeating-radial-gradient(circle,#4ade8038 0 1px,transparent 1px 32px);-webkit-mask:radial-gradient(circle,#000 35%,transparent 72%);mask:radial-gradient(circle,#000 35%,transparent 72%)}
+.rd::after{content:'';position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,#4ade8000 0deg,#4ade8055 42deg,#4ade8000 43deg);animation:varre 4s linear infinite}
+@keyframes varre{to{transform:rotate(360deg)}}
+
+/* Barra de progresso da sessão: ponto luminoso no fim da barra */
+.bar.fly{overflow:visible;margin-top:14px}.bar.fly i{position:relative;overflow:visible;border-radius:9px;box-shadow:0 0 10px #4ade8088}
+.bar.fly i::after{content:'';position:absolute;right:-5px;top:-3px;width:12px;height:12px;border-radius:50%;background:#4ade80;box-shadow:0 0 12px 3px #4ade80aa}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Capacete militar verde">
+  <defs>
+    <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6b9b44"/>
+      <stop offset="1" stop-color="#335f25"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f7d33"/>
+      <stop offset="1" stop-color="#244418"/>
+    </linearGradient>
+    <clipPath id="clip">
+      <path d="M17 82C17 46 40 19 66 19s47 27 47 63z"/>
+    </clipPath>
+  </defs>
+
+  <!-- cúpula -->
+  <path d="M17 82C17 46 40 19 66 19s47 27 47 63z" fill="url(#dome)" stroke="#14300d" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- camuflagem -->
+  <g clip-path="url(#clip)">
+    <path d="M14 64c12-8 22 2 34-4s12-16 28-12 8 16 22 12 18-6 20 4v30H14z" fill="#2c5320" opacity=".55"/>
+    <ellipse cx="40" cy="46" rx="14" ry="7" fill="#8cb862" opacity=".4"/>
+    <ellipse cx="92" cy="40" rx="11" ry="6" fill="#244418" opacity=".5"/>
+    <ellipse cx="70" cy="68" rx="16" ry="6" fill="#8cb862" opacity=".3"/>
+    <path d="M30 34C42 24 58 21 72 22" fill="none" stroke="#c7e6a4" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+  </g>
+
+  <!-- circuito (cibersegurança) -->
+  <g fill="none" stroke="#b6ffcb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".9">
+    <path d="M28 70h14l6-8h12"/>
+    <path d="M60 62l6-8h10"/>
+    <path d="M42 70v8"/>
+  </g>
+  <g fill="#b6ffcb">
+    <circle cx="28" cy="70" r="2.6"/>
+    <circle cx="76" cy="54" r="2.6"/>
+    <circle cx="42" cy="78" r="2.6"/>
+  </g>
+
+  <!-- estrela -->
+  <path d="m94 50 2.4 5 5.4.7-4 3.7 1 5.4-4.8-2.7-4.8 2.7 1-5.4-4-3.7 5.4-.7z" fill="#e8d98a" stroke="#14300d" stroke-width="1.2" stroke-linejoin="round"/>
+
+  <!-- aba -->
+  <path d="M7 84c24-9 90-9 114 0-2 11-17 17-57 17S9 95 7 84z" fill="url(#rim)" stroke="#14300d" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M16 86c28-6 68-6 96 0" fill="none" stroke="#8cb862" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+
+  <!-- jugular -->
+  <path d="M98 94c5 9 5 17 1 24" fill="none" stroke="#4a3a20" stroke-width="5" stroke-linecap="round"/>
+  <rect x="94" y="107" width="10" height="7" rx="1.5" fill="#c2b25a" stroke="#14300d" stroke-width="1.5"/>
+</svg>
