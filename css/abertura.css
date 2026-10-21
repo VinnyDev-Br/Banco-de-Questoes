@@ -1,200 +1,23 @@
-/* ==========================================================================
-   Abertura: Terminal Militar, Chuva de Código & Radar
-   ========================================================================== */
-
-/* --- Container Principal & Overlay --- */
-#splash {
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: #dff5e3;
-  overflow: hidden;
-  background: #030704;
-  transition: opacity 0.6s, transform 0.6s;
-}
-
-#splash::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: radial-gradient(ellipse at 50% 45%, #030704e6 0%, #030704b3 38%, transparent 85%);
-}
-
-#splash.out {
-  opacity: 0;
-  transform: scale(1.04);
-  pointer-events: none;
-}
-
-/* --- Efeitos de Fundo (Chuva & Radar) --- */
-.ab-chuva {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.45;
-}
-
-.ab-radar {
-  position: absolute;
-  left: 50%;
-  top: 44%;
-  width: min(130vw, 920px);
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: repeating-radial-gradient(circle, #4ade8026 0 1px, transparent 1px 72px);
-  -webkit-mask: radial-gradient(circle, #000 28%, transparent 70%);
-  mask: radial-gradient(circle, #000 28%, transparent 70%);
-}
-
-.ab-radar::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: conic-gradient(from 0deg, #4ade8000 0deg, #4ade8048 45deg, #4ade8000 46deg);
-  animation: ab-gira 4.5s linear infinite;
-}
-
-@keyframes ab-gira {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* --- Conteúdo Central --- */
-.ab-c {
-  position: relative;
-  z-index: 2;
-  padding: 24px;
-  max-width: 760px;
-}
-
-.ab-c > * {
-  opacity: 0;
-  animation: ab-in 0.9s ease forwards;
-}
-
-@keyframes ab-in {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-.ab-c .ab-logo {
-  width: min(30vw, 112px);
-  height: min(30vw, 112px);
-  margin: 0 auto;
-  animation-delay: 0.4s;
-  filter: drop-shadow(0 0 22px #4ade8066);
-}
-
-/* --- Tipografia --- */
-.ab-k {
-  margin: 16px 0 0;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: clamp(13px, 2.4vw, 16px);
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #4ade80;
-  animation-delay: 0.9s;
-}
-
-.ab-t {
-  margin: 6px 0 0;
-  color: #fff;
-  font-family: Rajdhani, Inter, sans-serif;
-  font-size: clamp(40px, 9.5vw, 88px);
-  font-weight: 700;
-  line-height: 0.96;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-shadow: 0 0 28px #4ade8044;
-  animation-delay: 1.2s;
-}
-
-.ab-t::after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 0;
-  margin: 16px auto 0;
-  background: #4ade80;
-  box-shadow: 0 0 12px #4ade80;
-  animation: ab-linha 1s ease 1.8s forwards;
-}
-
-@keyframes ab-linha {
-  to {
-    width: 110px;
-  }
-}
-
-.ab-s {
-  margin: 16px auto 18px;
-  max-width: 480px;
-  color: #8fae98;
-  animation-delay: 2s;
-}
-
-/* --- Sequência de Inicialização (Boot) --- */
-.ab-boot {
-  list-style: none;
-  margin: 0 auto 26px;
-  padding: 0;
-  max-width: 340px;
-  text-align: left;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 12.5px;
-  line-height: 1.9;
-  color: #6f8f7b;
-  animation-delay: 2.2s;
-}
-
-.ab-boot li {
-  opacity: 0;
-  animation: ab-in 0.4s ease forwards;
-}
-
-.ab-boot li:nth-child(1) { animation-delay: 2.4s; }
-.ab-boot li:nth-child(2) { animation-delay: 2.9s; }
-.ab-boot li:nth-child(3) { animation-delay: 3.4s; }
-
-.ab-boot li::before {
-  content: '> ';
-  color: #4ade80;
-}
-
-.ab-boot b {
-  float: right;
-  color: #4ade80;
-  font-weight: 500;
-}
-
-/* --- Botão de Entrada --- */
-#splash .btn {
-  background: #4ade80;
-  color: #04120a;
-  padding: 12px 36px;
-  font-family: Rajdhani, Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  border-radius: 6px;
-  box-shadow: 0 0 22px #4ade8055;
-  animation-delay: 3.9s;
-}
+/* Abertura: terminal militar com chuva de código, radar girando e sequência de inicialização */
+#splash{position:fixed;inset:0;z-index:50;display:grid;place-items:center;text-align:center;color:#dff5e3;overflow:hidden;background:#030704;transition:opacity .6s,transform .6s}
+#splash::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,#030704e6 0%,#030704b3 38%,transparent 85%)}
+#splash.out{opacity:0;transform:scale(1.04);pointer-events:none}
+.ab-chuva{position:absolute;inset:0;width:100%;height:100%;opacity:.45}
+.ab-radar{position:absolute;left:50%;top:44%;width:min(130vw,920px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:repeating-radial-gradient(circle,#4ade8026 0 1px,transparent 1px 72px);-webkit-mask:radial-gradient(circle,#000 28%,transparent 70%);mask:radial-gradient(circle,#000 28%,transparent 70%)}
+.ab-radar::after{content:'';position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,#4ade8000 0deg,#4ade8048 45deg,#4ade8000 46deg);animation:ab-gira 4.5s linear infinite}
+@keyframes ab-gira{to{transform:rotate(360deg)}}
+.ab-c{position:relative;z-index:2;padding:24px;max-width:760px}
+.ab-c>*{opacity:0;animation:ab-in .9s ease forwards}
+@keyframes ab-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.ab-c .ab-logo{width:min(30vw,112px);height:min(30vw,112px);margin:0 auto;animation-delay:.4s;filter:drop-shadow(0 0 22px #4ade8066)}
+.ab-k{margin:16px 0 0;font:500 clamp(13px,2.4vw,16px)/1.4 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#4ade80;animation-delay:.9s}
+.ab-t{margin:6px 0 0;color:#fff;font:700 clamp(40px,9.5vw,88px)/.96 Rajdhani,Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;text-shadow:0 0 28px #4ade8044;animation-delay:1.2s}
+.ab-t::after{content:'';display:block;height:3px;width:0;margin:16px auto 0;background:#4ade80;box-shadow:0 0 12px #4ade80;animation:ab-linha 1s ease 1.8s forwards}
+@keyframes ab-linha{to{width:110px}}
+.ab-s{margin:16px auto 18px;max-width:480px;color:#8fae98;animation-delay:2s}
+.ab-boot{list-style:none;margin:0 auto 26px;padding:0;max-width:340px;text-align:left;font:12.5px/1.9 'JetBrains Mono',ui-monospace,monospace;color:#6f8f7b;animation-delay:2.2s}
+.ab-boot li{opacity:0;animation:ab-in .4s ease forwards}
+.ab-boot li:nth-child(1){animation-delay:2.4s}.ab-boot li:nth-child(2){animation-delay:2.9s}.ab-boot li:nth-child(3){animation-delay:3.4s}
+.ab-boot li::before{content:'> ';color:#4ade80}
+.ab-boot b{float:right;color:#4ade80;font-weight:500}
+#splash .btn{background:#4ade80;color:#04120a;padding:12px 36px;font:700 18px Rajdhani,Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;border-radius:6px;box-shadow:0 0 22px #4ade8055;animation-delay:3.9s}
